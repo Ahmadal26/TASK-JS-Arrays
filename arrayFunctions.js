@@ -45,14 +45,14 @@ console.log(isArrayLengthEven(arrayofNum2));
  * e.g.
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
-const list =["Mshary","Hasan"];
+
 function addLailaToArray(instructors) {
   
   
-  list.push("Laila")
-  return list;
+  instructors.push('Laila')
+  return instructors
 }
-console.log (addLailaToArray(list));
+console.log (addLailaToArray(["Mshary", "Hasan"]));
 
 
 
@@ -65,14 +65,14 @@ console.log (addLailaToArray(list));
  * e.g.
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
-const all = ["Brazil", "Germany", "Italy"];
+
 function eliminateTeam(teams) {
     
-    let remove = all.pop();
-    return remove
+    
+    return teams.pop();
  }
  
- console.log(eliminateTeam(all));
+ console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
  
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
