@@ -9,14 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  if (numbers%2==1){
+  if (numbers.length%2==1){
 return(true);
-  }else 
+  }
   return(false);
 
   }
 const arrayofNum = [1,2,3];
-console.log(isArrayLengthOdd(arrayofNum.length));
+console.log(isArrayLengthOdd(arrayofNum));
 
 /**
  * isArrayLengthEven(numbers):
@@ -29,14 +29,14 @@ console.log(isArrayLengthOdd(arrayofNum.length));
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  if (numbers%2==0){
+  if (numbers.length%2==0){
 return(true);
-  }else 
+  }
   return(false);
 
   }
 const arrayofNum2 = [1,2,3,4];
-console.log(isArrayLengthEven(arrayofNum2.length));
+console.log(isArrayLengthEven(arrayofNum2));
 /**
  * addLailaToArray(instructors):
  * - receives array `instructors`
@@ -45,13 +45,14 @@ console.log(isArrayLengthEven(arrayofNum2.length));
  * e.g.
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
+const list =["Mshary","Hasan"];
 function addLailaToArray(instructors) {
   
-  const list =["Mshary","Hasan"];
+  
   list.push("Laila")
   return list;
 }
-console.log (addLailaToArray());
+console.log (addLailaToArray(list));
 
 
 
@@ -64,12 +65,15 @@ console.log (addLailaToArray());
  * e.g.
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
+const all = ["Brazil", "Germany", "Italy"];
 function eliminateTeam(teams) {
-   const all = ["Brazil", "Germany", "Italy"];
-   let remove = all.pop();
-   return remove
-}
-console.log(eliminateTeam());
+    
+    let remove = all.pop();
+    return remove
+ }
+ 
+ console.log(eliminateTeam(all));
+ 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -81,16 +85,16 @@ console.log(eliminateTeam());
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 //need some help with this question 
+const numx = ["apple", "orange", "banana", "kiwi",];
 function secondHalfOfArrayIfItIsEven(fruits) {
    if(fruits.length%2==0){
-    return fruits.remove(0,1);
+    return fruits.slice(fruits.length/2);
    }else 
-   { return fruits.length ==0;
+   { return [];
 
     }
 }
-const numx = ["apple", "orange", "banana", "kiwi",];
-console.log(secondHalfOfArrayIfItIsEven(numx.length));
+console.log(secondHalfOfArrayIfItIsEven(numx));
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -107,5 +111,13 @@ console.log(secondHalfOfArrayIfItIsEven(numx.length));
  */
 //need help with this question 
 function youGottaCalmDown(shout) {
-   
+   if (shout.includes("!")){
+    const index = shout.indexOf("!")
+    return shout.slice(0,index+1)
+   }
+   return shout
 }
+
+console.log(youGottaCalmDown("HI!!!!!!!!!!"))
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"))
+console.log(youGottaCalmDown("Hellooooo"))
