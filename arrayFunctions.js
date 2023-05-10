@@ -9,8 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
-}
+  if (numbers%2==1){
+return(true);
+  }else 
+  return(false);
+
+  }
+const arrayofNum = [1,2,3];
+console.log(isArrayLengthOdd(arrayofNum.length));
 
 /**
  * isArrayLengthEven(numbers):
@@ -23,9 +29,14 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
-}
+  if (numbers%2==0){
+return(true);
+  }else 
+  return(false);
 
+  }
+const arrayofNum2 = [1,2,3,4];
+console.log(isArrayLengthEven(arrayofNum2.length));
 /**
  * addLailaToArray(instructors):
  * - receives array `instructors`
@@ -35,8 +46,15 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+  
+  const list =["Mshary","Hasan"];
+  list.push("Laila")
+  return list;
 }
+console.log (addLailaToArray());
+
+
+
 
 /**
  * eliminateTeam(teams):
@@ -47,9 +65,11 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+   const all = ["Brazil", "Germany", "Italy"];
+   let remove = all.pop();
+   return remove
 }
-
+console.log(eliminateTeam());
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -60,10 +80,17 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]) -> ["banana", "kiwi"]
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
+//need some help with this question 
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
-}
+   if(fruits.length%2==0){
+    return fruits.remove(0,1);
+   }else 
+   { return fruits.length ==0;
 
+    }
+}
+const numx = ["apple", "orange", "banana", "kiwi",];
+console.log(secondHalfOfArrayIfItIsEven(numx.length));
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -78,6 +105,7 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use number method .indexOf()
  * - Use string method .slice()
  */
+//need help with this question 
 function youGottaCalmDown(shout) {
-  // Your code here
+   
 }
